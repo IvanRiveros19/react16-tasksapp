@@ -29,10 +29,10 @@ if(data != null){
 }else {
   setUserName('Ejemplo de Ivan')
   setTaskItems ([
-    { name: '  Task One Example', done: false },
-    { name: '  Task Two  Example', done: false },
-    { name: '  Task Three  Example', done: true },
-    { name: '  Task Four  Example', done: false }
+    { name: 'Tarea 1', done: false },
+    { name: 'Tarea 2', done: false },
+    { name: 'Tarea 3', done: true },
+    { name: 'Tarea 4', done: false }
   ])
 
   setShowCompleted(true);
@@ -71,8 +71,8 @@ useEffect(() => {
       <table className = "table table-striped table-bordered">
         <thead>
           <tr>
-            <th> Description</th>
-            <th>Done</th>
+            <th> Descripcion</th>
+            <th>Estado</th>
           </tr>
         </thead>
         <tbody>
@@ -81,10 +81,7 @@ useEffect(() => {
       </table>
       <div className = ".bg-secondary-text-white text-center p-2">
 
-        <VisibilityControl 
-          description="Completed Task"
-          isChecked = {showCompleted}
-          callback = {checked => setShowCompleted (checked)}
+        <VisibilityControl description="Completed Tasks" isChecked = {showCompleted} callback = {checked => setShowCompleted (checked)}
         />
       </div  >
       {
@@ -92,8 +89,8 @@ useEffect(() => {
           <table className="table table-striped table-bordered">
             <thead>
               <tr>
-                <th>Description</th>
-                <th>Done</th>
+                <th>Descripcion</th>
+                <th>Estado</th>
               </tr>
             </thead>
             <tbody>
